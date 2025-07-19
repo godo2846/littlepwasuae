@@ -1,0 +1,246 @@
+/* ========================================== */
+/* ESTILOS GENERALES PARA LA SECCIÓN DE MASCOTAS */
+/* ========================================== */
+
+.pet-services-section {
+  padding: 80px 0;
+  background-color: #fffbe9;
+}
+
+.pet-services-title {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #103a4b;
+  font-weight: 700;
+  position: relative;
+}
+
+.pet-services-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #f97f21;
+  margin: 15px auto 0;
+}
+
+/* ========================================== */
+/* ESTILOS PARA LAS TARJETAS DE SERVICIOS */
+/* ========================================== */
+
+.pet-service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.pet-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor de imagen */
+.card-img-container {
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pet-service-card:hover .card-img-container img {
+  transform: scale(1.05);
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Icono */
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f97f21;
+  transition: transform 0.3s ease;
+}
+
+.pet-service-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+/* Título */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #103a4b;
+  text-align: center;
+}
+
+/* Lista de servicios */
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex: 1;
+}
+
+.service-list li {
+  padding: 8px 0;
+  text-align: center;
+  color: #555;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.service-list li:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: #eee;
+  margin: 8px auto;
+}
+
+/* Nota pequeña */
+.small-note {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 3px;
+}
+
+/* Botón */
+.service-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #103a4b !important;
+  color: white !important;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none;
+  margin-top: auto;
+}
+
+.service-btn:hover {
+  background-color: #f97f21 !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
+/* Estilo especial para la tarjeta naranja */
+.orange-card {
+  background-color: #f97f21;
+}
+
+.orange-card .card-title,
+.orange-card .service-list li,
+.orange-card .card-icon {
+  color: white !important;
+}
+
+.orange-card .service-list li:not(:last-child)::after {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.orange-card .service-btn {
+  background-color: white !important;
+  color: #f97f21 !important;
+}
+
+.orange-card .service-btn:hover {
+  background-color: #103a4b;
+  color: white;
+}
+
+/* ========================================== */
+/* MEDIA QUERIES PARA RESPONSIVE */
+/* ========================================== */
+
+@media (max-width: 1199.98px) {
+  .card-img-container {
+    height: 320px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .pet-services-section {
+    padding: 60px 0;
+  }
+  
+  .pet-service-card {
+    margin-bottom: 30px;
+  }
+  
+  .card-img-container {
+    height: 200px;
+  }
+  
+  .card-body {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pet-services-title {
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+  }
+  
+  .card-img-container {
+    height: 350px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .service-list li {
+    font-size: 0.9rem;
+  }
+  
+  .service-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pet-services-section {
+    padding: 50px 0;
+  }
+  
+  .card-img-container {
+    height: 350px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .service-list li {
+    padding: 6px 0;
+  }
+}

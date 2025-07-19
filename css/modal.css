@@ -1,0 +1,231 @@
+/* ====================== */
+/* ESTILOS GENERALES DEL FORMULARIO */
+/* ====================== */
+
+.form-box {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  margin-top: 40px;
+}
+
+.form-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.form-control, .form-select {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #e8e8e8;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #f97f21;
+  box-shadow: 0 0 0 0.25rem rgba(249, 127, 33, 0.15);
+  background-color: white;
+}
+
+/* ====================== */
+/* ESTILOS PARA LOS BOTONES DE TIPO DE MASCOTA */
+/* ====================== */
+
+.type-buttons {
+  margin: 1.2rem 0;
+}
+
+.type-buttons label {
+  color: #103a4b;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.btn-group {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.btn-outline-secondary {
+  border: 2px solid #e0e0e0;
+  color: #555;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-check:checked + .btn-outline-secondary,
+.btn-check:active + .btn-outline-secondary {
+  background-color: #103a4b !important;
+  color: white !important;
+  border-color: #103a4b !important;
+  transform: scale(0.98);
+}
+
+/* ====================== */
+/* ESTILOS PARA EL BOTÓN PRINCIPAL */
+/* ====================== */
+
+.btn-orange {
+  background-color: #f97f21 !important;
+  color: white !important;
+  border: none;
+  padding: 0.9rem;
+  font-weight: 600;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-top: 0.5rem;
+}
+
+.btn-orange:hover {
+  background-color: #e5711d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(249, 127, 33, 0.25);
+}
+
+.btn-orange:active {
+  transform: translateY(0);
+}
+
+/* ====================== */
+/* ESTILOS PARA LOS MODALES */
+/* ====================== */
+
+.modal-content {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-body {
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.modal-body i {
+  margin-bottom: 1.5rem;
+}
+
+.modal-body h3 {
+  color: #103a4b;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.modal-body p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.modal-body .btn-orange {
+  width: auto;
+  padding: 0.6rem 1.5rem;
+}
+
+/* ====================== */
+/* ANIMACIONES Y EFECTOS */
+/* ====================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal.fade .modal-dialog {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* ====================== */
+/* RESPONSIVE DESIGN */
+/* ====================== */
+
+@media (max-width: 992px) {
+  .form-box {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-box {
+    padding: 1.5rem;
+  }
+  
+  .type-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .type-buttons label {
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-box {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Contact Information Section Styles */
+.col-lg-6 h2 {
+    margin-top: 150px;
+  color: #103a4b; /* Dark blue color */
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.col-lg-6 p.text-muted {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons {
+  font-size: 1rem;
+  line-height: 2.2;
+}
+
+.social-icons i {
+  color: #f97f21; /* Orange color */
+  width: 24px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .col-lg-6 h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-lg-6 h2 {
+    font-size: 1.4rem;
+  }
+  
+  .social-icons {
+    line-height: 2;
+  }
+}

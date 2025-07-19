@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Little Paws Services</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/cards.css">
   <!-- Favicon & Meta -->
-  <link rel="icon" type="image/png" href="./img/favicon.png">
-  <meta name="description" content="Affordable and loving pet care services for cats and dogs.">
+ <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -24,43 +25,10 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>document.addEventListener('DOMContentLoaded', () => AOS.init());</script>
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-    .text-orange {
-      color: #f97f21;
-    }
-    .bg-orange {
-      background-color: #f97f21;
-    }
-    .btn-orange {
-      background-color: #f97f21;
-      color: #fff;
-    }
-    .btn-orange:hover {
-      background-color: #e36f12;
-      color: #fff;
-    }
-    .card-hover:hover {
-      transform: translateY(-5px);
-      transition: transform 0.3s ease;
-    }
-    .nav-link {
-      font-weight: 500;
-      color: #333;
-    }
-    .nav-link:hover,
-    .nav-link.active {
-      color: #f97f21;
-      border-bottom: 2px solid #f97f21;
-    }
-  </style>
 </head>
 <body>
-  <!-- Header -->
-  
-   <header class="header">
+  <div class="main">
+<header class="header">
   <div class="d-flex align-items-center gap-3">
     <a href="./index.html" class="d-flex align-items-center text-decoration-none">
       <img src="./img/logo.jpg" alt="Little Paws Logo" height="60">
@@ -68,13 +36,12 @@
     </a>
   </div>
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="servicios.html">Services</a>
-    <a href="paquetes.html">Packages</a>
-    <a href="contacto.html">Contact</a>
+    <a href="./index.html">Home</a>
+    <a href="./Servicios.html">Services</a>
+    <a href="./Paquetes.html">Packages</a>
+    <a href="./Contacto.html">Contact</a>
   </nav>
-
-  </header>
+</header>
 
   <!-- Hero Section -->
   <section class="hero bg-orange text-white text-center py-5">
@@ -109,50 +76,58 @@
       </div>
       <div class="col-lg-7">
         <div class="row g-4">
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="10">
-            <div class="card card-hover border-0 shadow-sm rounded-4 text-white bg-orange">
-              <img src="./img/godo.jpg" class="img-fluid rounded shadow" style="max-height: 500px;">
-              <div class="card-body">
-                <div class="text-center mb-3">
-                  <i class="fa-solid fa-cat fa-2x"></i>
-                </div>
-                <h5 class="card-title text-center fw-bold">Cat</h5>
-                <ul class="list-unstyled text-center">
-                  <li>Sitting / hour</li>
-                  <li>Live In</li>
-                  <li>Boarding</li>
-                  <li>Grooming</li>
-                  <li>Transportation</li>
-                </ul>
-                <div class="text-center mt-3">
-                  <a href="#" class="btn btn-light rounded-pill px-4">Book Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card card-hover border-0 shadow-sm rounded-4">
-              <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.43_feec6ad8.jpg" class="card-img-top rounded-top-4" alt="Dog Services">
-              <div class="card-body">
-                <div class="text-center mb-3">
-                  <i class="fa-solid fa-dog fa-2x text-dark"></i>
-                </div>
-                <h5 class="card-title text-center text-orange fw-bold">Dog</h5>
-                <ul class="list-unstyled text-center text-muted">
-                  <li>Dog Walking</li>
-                  <li>Live In</li>
-                  <li>Grooming</li>
-                  <li>Transportation</li>
-                  <li>Basic Training</li>
-                  <li>Sitting Packages</li>
-                  <li>Boarding <small class="d-block">Small & Medium Breed</small></li>
-                </ul>
-                <div class="text-center mt-3">
-                  <a href="#" class="btn btn-orange rounded-pill px-4">Book Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="col-md-6">
+  <div class="pet-service-card card border-0 shadow-sm rounded-4">
+    <!-- Contenedor de imagen -->
+    <div class="card-img-container rounded-top-4">
+      <img src="./img/godo.jpg" alt="Cat services" class="img-fluid">
+    </div>
+    
+    <div class="card-body p-4">
+      <!-- Resto de tu contenido actual -->
+      <div class="text-center mb-3">
+        <i class="fa-solid fa-cat fa-2x"></i>
+      </div>
+      <h5 class="card-title text-center fw-bold">Cat</h5>
+      <ul class="list-unstyled text-center">
+        <li>Sitting / hour</li>
+        <li>Live In</li>
+        <li>Boarding</li>
+        <li>Grooming</li>
+        <li>Transportation</li>
+      </ul>
+      <div class="text-center mt-3">
+        <a href="/Contacto.html" class="btn btn-primary rounded-pill px-4">Book Now</a>
+      </div>
+    </div>
+  </div>
+</div><div class="col-md-6">
+  <div class="pet-service-card card border-0 shadow-sm rounded-4">
+    <!-- Contenedor de imagen -->
+    <div class="card-img-container rounded-top-4">
+      <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.43_feec6ad8.jpg" alt="Cat services" class="img-fluid">
+    </div>
+    
+    <div class="card-body p-4">
+      <!-- Resto de tu contenido actual -->
+      <div class="text-center mb-3">
+        <i class="fa-solid fa-dog fa-2x"></i>
+      </div>
+      <h5 class="card-title text-center fw-bold">Dog</h5>
+      <ul class="list-unstyled text-center">
+        <li>Sitting / hour</li>
+        <li>Live In</li>
+        <li>Boarding</li>
+        <li>Grooming</li>
+        <li>Transportation</li>
+      </ul>
+      <div class="text-center mt-3">
+        <a href="./Contacto.html" class="btn btn-primary rounded-pill px-4">Book Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
         </div>
       </div>
     </div>
@@ -186,9 +161,9 @@
   </section>
 
   <!-- Footer -->
- <footer class="bg-dark text-white py-4 mt-5">
+<footer class="bg-dark text-white py-4 mt-5">
   <div class="container text-center">
-    <p class="mb-1">&copy; 2025 Little Paws. All rights reserved.</p>
+    
     <p class="mb-2">
       <i class="bi bi-whatsapp me-1 text-success"></i>
       <a href="https://wa.me/971505039292" class="text-white text-decoration-none me-3">
@@ -201,8 +176,8 @@
       </a>
 
       <i class="bi bi-envelope-fill me-1"></i>
-      <a href="mailto:contact@littlepaws.com" class="text-orange text-decoration-none fw-bold">
-        contact@littlepaws.com
+      <a href="mailto:admin@littlepawsuae.com" class="text-orange text-decoration-none fw-bold">
+        admin@littlepawsuae.com
       </a>
     </p>
 
@@ -214,8 +189,10 @@
       <a href="https://maps.app.goo.gl/p2KtNueSYFsmroRL9" target="_blank" class="text-white"><i class="bi bi-geo-alt-fill fs-4"></i>
       </a>
     </div>
+    <div><p class="small text-center ">&copy; 2025 Little Paws Care Services LLC. All rights reserved.</p></div>
   </div>
 </footer>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 
  

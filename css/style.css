@@ -1,11 +1,17 @@
-
 * /* RESET */
-* body {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  background-color: #fffbe9;
+  background-color: #fffbe9 !important;
+}
+div.main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+
+
 }
 
 
@@ -61,19 +67,7 @@
   margin-bottom: 30px;
 }
 
-.btn {
-  background-color: #103a4b;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
 
-.btn:hover {
-  background-color: #f97f21;
-}
 
 /* FEATURES */
 .features {
@@ -100,19 +94,22 @@
 /* PETS SECTION */
 .pets {
   background-color: #f97f21;
-  padding: 50px 20px;
-  display: flex;
+  display: flex;                  /* Usa flex en lugar de column */
+  flex-direction: column;         /* Para ordenar verticalmente */
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  margin-top: 40px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;                  /* Elimina padding repetido */
+  margin: 40px auto;              /* Esto centra horizontalmente */
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 60px;            /* Simplifica las esquinas redondeadas */
 }
 
+
 .pets img {
-  height: 200px;
-  border-radius: 20px;
+  height: 100px;
+  border-radius: 30px;
   object-fit: cover;
 }
 
@@ -174,3 +171,31 @@
       color: #f97f21;
       border-bottom: 2px solid #f97f21;
     }
+
+
+
+/* Ajuste visual del carrusel */
+.carousel-inner img {
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+}
+
+/* Responsive ajustes adicionales */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .features {
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  .carousel-inner img {
+    height: 250px;
+  }
+}
+footer.bg-dark {
+  background-color: #222 !important;
+}

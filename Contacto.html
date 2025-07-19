@@ -1,63 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Little Paws - Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Little Paws - The best care for your furry friends.">
+  <meta name="keywords" content="pets, veterinary, pet care, grooming, dog, cat">
+  <meta name="author" content="Little Paws">
+  <title>Little Paws</title>
 
-  <!-- CSS & Fonts -->
   <link rel="stylesheet" href="./css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/cards.css">
+  <link rel="stylesheet" href="./css/modal.css">
+  <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/e0a9481f88.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Jost:ital,wght@0,100..900;1,100..900&family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Jost', sans-serif;
-      background-color: #fffbed;
-    }
-    .text-orange { color: #f97f21; }
-    .bg-orange { background-color: #f97f21; }
-    .btn-orange {
-      background-color: #f97f21;
-      color: #fff;
-    }
-    .btn-orange:hover {
-      background-color: #e36f12;
-    }
-    .nav-link {
-      font-weight: 500;
-      color: #333;
-    }
-    .nav-link:hover, .nav-link.active {
-      color: #f97f21;
-      border-bottom: 2px solid #f97f21;
-    }
-    .form-box {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .type-buttons button {
-      margin-right: 10px;
-    }
-    .social-icons i {
-      margin-right: 10px;
-      color: #f97f21;
-    }
-    .pets img {
-      max-height: 120px;
-    }
-  </style>
+<!-- Bootstrap JS y Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Font Awesome para iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-
-  <!-- Header -->
-  
-    <header class="header">
+<div class="main">
+<header class="header">
   <div class="d-flex align-items-center gap-3">
     <a href="./index.html" class="d-flex align-items-center text-decoration-none">
       <img src="./img/logo.jpg" alt="Little Paws Logo" height="60">
@@ -65,13 +38,12 @@
     </a>
   </div>
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="servicios.html">Services</a>
-    <a href="paquetes.html">Packages</a>
-    <a href="contacto.html">Contact</a>
+    <a href="./index.html">Home</a>
+    <a href="./Servicios.html">Services</a>
+    <a href="./Paquetes.html">Packages</a>
+    <a href="./Contacto.html">Contact</a>
   </nav>
-
-  </header>
+</header>
 
   <!-- Main Section -->
   <main class="container mb-5">
@@ -79,35 +51,78 @@
       
       <!-- Form -->
       <div class="col-lg-6 mb-4">
-        <div class="form-box">
-          <form>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Name" required>
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Phone Number" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Type of service">
-            </div>
-            <div class="mb-3 type-buttons">
-              <label class="me-2">Type of pet:</label>
-              <button type="button" class="btn btn-outline-secondary btn-sm">Dog</button>
-              <button type="button" class="btn btn-outline-secondary btn-sm">Cat</button>
-            </div>
-            <div class="mb-3">
-              <input type="number" class="form-control" placeholder="Number of pets">
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Message / dates of request"></textarea>
-            </div>
-            <button type="submit" class="btn btn-orange w-100">Submit</button>
-          </form>
+  <div class="form-box">
+    <form id="petContactForm">
+      <div class="mb-3">
+        <input type="text" class="form-control" name="name" placeholder="Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" name="email" placeholder="Email" required>
+      </div>
+      <div class="mb-3">
+        <select class="form-select" name="service" required>
+          <option value="" selected disabled>Select service</option>
+          <option value="Daily Cat Daycare">Daily Cat Daycare</option>
+          <option value="Pet Boarding">Pet Boarding</option>
+          <option value="Basic Grooming">Basic Grooming</option>
+          <option value="Pet Sitting">Pet Sitting</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="mb-3 type-buttons">
+        <label class="me-2">Type of pet:</label>
+        <div class="btn-group" role="group">
+          <input type="radio" class="btn-check" name="pet_type" id="dogType" value="Dog" autocomplete="off" required>
+          <label class="btn btn-outline-secondary btn-sm" for="dogType">Dog</label>
+          
+          <input type="radio" class="btn-check" name="pet_type" id="catType" value="Cat" autocomplete="off">
+          <label class="btn btn-outline-secondary btn-sm" for="catType">Cat</label>
+          
+          <input type="radio" class="btn-check" name="pet_type" id="otherType" value="Other" autocomplete="off">
+          <label class="btn btn-outline-secondary btn-sm" for="otherType">Other</label>
         </div>
       </div>
+      <div class="mb-3">
+        <input type="number" class="form-control" name="pet_count" placeholder="Number of pets" min="1" required>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" name="message" rows="4" placeholder="Message / dates of request" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-orange w-100">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <i class="fas fa-check-circle text-success fa-5x mb-4"></i>
+        <h3 class="mb-3">¡Thank you for contacting us!</h3>
+        <p class="mb-4">We have received your request and will contact you soon.</p>
+        <button type="button" class="btn btn-orange px-4" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Error -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-5">
+        <i class="fas fa-exclamation-circle text-danger fa-5x mb-4"></i>
+        <h3 class="mb-3">Error sending message</h3>
+        <p class="mb-4" id="errorMessage">Please try again later.</p>
+        <button type="button" class="btn btn-orange px-4" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
       <!-- Contact Info -->
       <div class="col-lg-6">
@@ -123,22 +138,65 @@
     </div>
   </main>
 
-  <!-- Pet Images -->
-  <section class="bg-orange py-3">
-    <div class="container d-flex justify-content-center gap-4 pets">
-      <img src="./img/Imagen de WhatsApp 2025-05-01 a las 03.28.10_e80e2484.jpg" alt="Dog">
-      <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.41_a9bbcde4.jpg" alt="Cat">
-      <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.43_0dbfb6ad.jpg" alt="Dog">
-      <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.43_e82abddf.jpg" alt="Cat">
-      <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.43_feec6ad8.jpg" alt="Cat">
-      <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.44_d8493aef.jpg" alt="Cat">
-    </div>
-  </section>
+<section class="pets">
+    <button class="carousel-control-prev" type="button" data-bs-target="#petsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#petsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <section id="petsCarousel" class="carousel slide w-50 mx-auto" data-bs-ride="carousel" data-bs-interval="3000">
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#petsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#petsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#petsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#petsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#petsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#petsCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          </div>
+        
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/Imagen de WhatsApp 2025-05-01 a las 03.28.10_e80e2484.jpg" class="d-block w-100" alt="Cute Cat">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.41_a9bbcde4.jpg" class="d-block w-100" alt="Happy Dog">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.43_0dbfb6ad.jpg" class="d-block w-100" alt="Playful Kitten">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.43_e82abddf.jpg" class="d-block w-100" alt="Playful Kitten">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.43_feec6ad8.jpg" class="d-block w-100" alt="Playful Kitten">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/Imagen de WhatsApp 2025-05-10 a las 14.21.44_d8493aef.jpg" class="d-block w-100" alt="Playful Kitten">
+            </div>
+          </div>
+        
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#petsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#petsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </section>
+</section>
 
-  <!-- Footer -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 <footer class="bg-dark text-white py-4 mt-5">
   <div class="container text-center">
-    <p class="mb-1">&copy; 2025 Little Paws. All rights reserved.</p>
+    
     <p class="mb-2">
       <i class="bi bi-whatsapp me-1 text-success"></i>
       <a href="https://wa.me/971505039292" class="text-white text-decoration-none me-3">
@@ -151,8 +209,8 @@
       </a>
 
       <i class="bi bi-envelope-fill me-1"></i>
-      <a href="mailto:contact@littlepaws.com" class="text-orange text-decoration-none fw-bold">
-        contact@littlepaws.com
+      <a href="mailto:admin@littlepawsuae.com" class="text-orange text-decoration-none fw-bold">
+        admin@littlepawsuae.com
       </a>
     </p>
 
@@ -164,10 +222,75 @@
       <a href="https://maps.app.goo.gl/p2KtNueSYFsmroRL9" target="_blank" class="text-white"><i class="bi bi-geo-alt-fill fs-4"></i>
       </a>
     </div>
+    <div><p class="small text-center ">&copy; 2025 Little Paws Care Services LLC. All rights reserved.</p></div>
   </div>
 </footer>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('petContactForm');
+  const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+  const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+  
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // Mostrar loader en el botón
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+    submitBtn.disabled = true;
+    
+    try {
+      // Enviar el formulario usando FormSubmit
+      const formData = new FormData(form);
+      
+      // Agregar campos adicionales para FormSubmit
+      formData.append('_to', 'admin@littlepawsuae.com');
+      formData.append('_subject', 'New Pet Service Request');
+      formData.append('_template', 'table'); // Estilo de email
+      formData.append('_replyto', formData.get('email')); // Campo de reply-to
+      
+      const response = await fetch('https://formsubmit.co/ajax/admin@littlepawsuae.com', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        // Mostrar modal de éxito
+        confirmationModal.show();
+        // Resetear formulario
+        form.reset();
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      // Mostrar modal de error con mensaje específico
+      document.getElementById('errorMessage').textContent = error.message || 'There was an error sending your message. Please try again.';
+      errorModal.show();
+    } finally {
+      // Restaurar botón
+      submitBtn.innerHTML = originalBtnText;
+      submitBtn.disabled = false;
+    }
+  });
+  
+  // Cuando se cierra el modal de confirmación, redirigir al index
+  document.getElementById('confirmationModal').addEventListener('hidden.bs.modal', function() {
+    window.location.href = 'index.html';
+  });
+});
+</script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
